@@ -39,6 +39,7 @@ app.use("/api/wishlist", wishlistRouter);
 mongoose.connection.once("open", () => {
   console.log("Connected to DB");
   app.listen( PORT, () => {
+    console.log(`PORT is ${PORT}`);
     console.log(`Server is Up and Running:  http://localhost:${PORT}`);
   });
 });
